@@ -4,7 +4,7 @@
    const ItemList=( {data} )=>{
      return (
          <div className=''>
-{data.map((prod)=> (<Item key={item.id} prod={item}/> ))}
+{data.map((prod)=> (<Item key={Item.id} prod={prod}/> ))}
 
          </div>
      );
