@@ -15,9 +15,7 @@ html, body, #root {
 .logo-image:hover {
   filter: drop-shadow(0 0 2em #f0d356aa);
 }
-.logo-image.react:hover {
-  filter: drop-shadow(0 0 2em #eeb826aa);
-}
+
 
 @keyframes logo-spin {
   from {
@@ -38,7 +36,7 @@ html, body, #root {
 .main-layout {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: top;
   align-items: center;
   min-height: 100vh;
   text-align: center;
@@ -48,44 +46,82 @@ html, body, #root {
   box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
 }
 
-/* Estilo general de la barra */
 .navbar {
+
+  /* border: 2px dashed red;*/
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1rem 2rem;
   background-color: #181201;
   color: white;
   width: 100%;
   box-sizing: border-box;
+  position: relative;
+  top: 0;
+  padding: 0.8rem 2rem;
+   filter: drop-shadow(0 0 2em #d37d2cda);
+
+
+  /* 👇 Esta es la línea que agregás */
+  min-height: 100px;  /* o el valor que prefieras */
 }
 
-/* Logo a la izquierda */
-.logo-image {
-  font-size: 1.5rem;
-  font-weight: bold;
-  gap: 0.5rem; /* espacio entre texto e imagen */
+
+
+.logo{
+
+  font-size:bold;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+ 
 }
+
+.logo-text {
+  font-size: 1rem;
+  font-family: comic sans ms;
+  color: rgb(243, 208, 11);
+  font-weight: monospace;
+  margin-top: 0.1px;  /* 👈 espacio entre la imagen y el texto */
+
+}
+
+
+.logo-image {
+  width: 120px;   /* Cambiá este valor como quieras */
+  height: 60px;
+  object-fit: scale-down; /* O "cover" si querés que recorte y llene el espacio */
+}
+
 
 /* Lista de enlaces en horizontal */
 .nav-links {
   list-style: none;
   display: flex;
-  gap: 1.5rem;
+  gap: 6rem;
   align-items: center;
   margin: 0;
   padding: 0;
+  
+ 
 }
 
 /* Estilo de los enlaces */
 .nav-links a {
-  color: white;
+  color: rgb(236, 238, 131);
+  font-family: 'Courier New', Courier, monospace;
+  font-weight: bold;
   text-decoration: none;
-  font-weight: 500;
+  border: #181201;
+  
+font-size:18px;
 }
 
-.nav-links a:hover {
-  text-decoration: underline;
+.nav-links :hover {
+
+   filter: drop-shadow(0 0 2em #facd04aa);
+   
 }
 
 
@@ -96,4 +132,19 @@ html, body, #root {
   text-align: center;
 }
 
+
+.cart-widget {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  color: violet;
+font-size: 20px;
+font-family: 'Arial Narrow';
+  font-weight: bold;
+  text-decoration: none;
+  border: #181201;
+  margin-left: 1rem;
+
+}
 
