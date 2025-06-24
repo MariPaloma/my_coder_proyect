@@ -3,7 +3,7 @@
    
    const ItemList=( {data} )=>{
      return (
-         <div className=''>
+         <div className='item-list'>
 {data.map((prod)=> (<Item key={prod.id} prod={prod}/> ))}
 
          </div>

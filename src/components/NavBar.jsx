@@ -23,26 +23,25 @@ function NavBar() {
 export default NavBar;
 /*/
 
-import { Link } from 'react-router-dom';
-import CartWidget from './CartWidget';
 import Logo from '../assets/GatoPlata.png';
+import CartWidget from './CartWidget';
+import { NavLink } from 'react-router-dom';
 
 function NavBar() {
   return (
     <nav className="navbar">
       <div className="logo">
-        <Link to="/">
+        <NavLink to="/">
           <img src={Logo} alt="Logo" className="logo-image" />
-        </Link>
+        </NavLink>
         <p className="logo-text">Gato Platense</p>
       </div>
 <ul className="nav-links">
-  <li><Link to="/"></Link></li>
-    <li><Link to="/más-vendidos">+ Vendidos✨</Link></li>
-  <li><Link to="/categoria/libreria">Librería</Link></li>
-  <li><Link to="/categoria/bazar">Bazar</Link></li>
-  <li><Link to="/ofertas">Ofertas</Link></li>
-    <li><Link to="/productos">Ver Todo</Link></li>
+    <li><NavLink to="/category/más-vendidos">+ Vendidos✨</NavLink></li>
+  <li><NavLink to="/category/libreria">Librería</NavLink></li>
+  <li><NavLink to="/category/bazar">Bazar</NavLink></li>
+  <li><NavLink to="/category/ofertas">Ofertas</NavLink></li>
+    <li><NavLink to="/category/productos">Ver Todo</NavLink></li>
 
 </ul>
 
