@@ -1,7 +1,7 @@
 import {useState} from 'react'
 //importaciones
 
-const ItemCount = ({stock}) => {
+const ItemCount = ({stock, onAdd}) => {
     //logicas, funciones, hooks
 
     //DECLARACIÓN DEL HOOK
@@ -23,7 +23,9 @@ if (count > 0) {
    
     }
     
-
+    const comprar = () => {
+onAdd(count);
+    }
  return (
   <div>
     <div className="item-count" style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '10px' }}>
@@ -32,7 +34,7 @@ if (count > 0) {
       <button className="btn btn-success" onClick={sumar}>+</button>
     </div>
     <div style={{ marginTop: '10px' }}>
-      <button className="btn btn-primary">Agregar al carrito</button>
+      <button className="btn btn-primary" onClick={comprar}>Agregar al carrito</button>
     </div>
   </div>
   )
