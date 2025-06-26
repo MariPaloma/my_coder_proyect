@@ -10,7 +10,8 @@ const CartWidgetReactIcons = () => {
     return (
         <div>
             <IoCartSharp fontSize={'1.5rem'} />
-            <Badge bg="danger">8</Badge>
+         <Badge bg="danger">{cart.length}</Badge>
+
         </div>
     );
 }

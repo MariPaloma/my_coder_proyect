@@ -25,7 +25,7 @@ export default NavBar;
 
 import Logo from '../assets/GatoPlata.png';
 // import CartWidget from './CartWidget';
-import CartWidgetReactIcons from './CartWidgetReactIcons';
+import CartWidget from './CartWidget';
 import { NavLink } from 'react-router-dom';
 
 function NavBar() {
@@ -47,8 +47,8 @@ function NavBar() {
 </ul>
 
 
-      /* <CartWidget /> */
-      <CartWidgetReactIcons/>
+    
+      <CartWidget/>
     </nav>
   );
 }

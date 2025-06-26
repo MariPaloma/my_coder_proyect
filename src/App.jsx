@@ -1,5 +1,6 @@
 import { useState } from 'react'
-import reactLogo from './assets/react.svg'
+import reactLogo from './assets/react.svg' 
+
 
 import './App.css'
 import NavBar from './components/NavBar';
@@ -12,7 +13,9 @@ import {CartProvider} from './context/CartContext';
 function App() {
   return (
     <BrowserRouter>
-      <CartProvider>
+    <CartProvider>
+    <NavBar/>
+  
   <Routes>
         <Route path='/' element={<MainLayout greeting="Bienvenidos a mi app" />} />
         <Route path='/category/:categoryId' element={<ItemListContainer greeting="Estas en la categoría:" />} />
@@ -24,9 +27,9 @@ function App() {
         {/* <Route path="/categoria/:categoriaId" element={<ItemListContainer greeting="Productos por categoría" />} /> */}
 
       </Routes>
-      </CartProvider>
   
-    
+  
+    </CartProvider>
     </BrowserRouter>
   )
 }

@@ -29,7 +29,7 @@ const Cartrovider = ({ children }) => {
   };
  */
   return (
-    <CartContext.Provider value={{cart}}>
+    <CartContext.Provider value={{cart, setCart}}>
       {/* Proveedor del contexto que envuelve a los hijos */}
       {children}
       
@@ -39,4 +39,4 @@ const Cartrovider = ({ children }) => {
   );
 } 
 
-export default CartContext;
+// exportamos el proveedor del contexto
