@@ -10,11 +10,12 @@ const ItemDetail = ({ item }) => {
  /*  const contexto = useContext(CartContext);
   console.log(contexto) */
 
-  const {cart} = useContext(CartContext);
-  console.log(cart);
+  const {addItem} = useContext(CartContext);
+ 
 
-  const onAdd = (count) => {
-    console.log(`Agregaste ${count} unidades de ${item.name} al carrito.`);
+  const onAdd = (cantidad) => {
+    console.log(`Agregaste ${cantidad} unidades de ${item.name} al carrito.`);
+    addItem(item, cantidad);
   }
   return (
     <div className="card" style={{ width: '25rem', margin: '20px auto' }}>

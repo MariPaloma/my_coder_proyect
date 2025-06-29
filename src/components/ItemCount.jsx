@@ -5,18 +5,18 @@ const ItemCount = ({stock, onAdd}) => {
     //logicas, funciones, hooks
 
     //DECLARACIÓN DEL HOOK
-    const [count, setCount] = useState(0);
+    const [cantidad, setCount] = useState(0);
 
     const restar = () => {
-if (count > 0) {
+if (cantidad > 0) {
     
 
-        setCount(count - 1);
+        setCount(cantidad - 1);
         }
     }
     const sumar = () => {
-        if (count < stock) {
-            setCount(count + 1);
+        if (cantidad < stock) {
+            setCount(cantidad + 1);
         }
             
  
@@ -24,13 +24,13 @@ if (count > 0) {
     }
     
     const comprar = () => {
-onAdd(count);
+onAdd(cantidad);
     }
  return (
   <div>
     <div className="item-count" style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '10px' }}>
       <button className="btn btn-danger" onClick={restar}>-</button>
-      <span style={{ color: 'black', fontSize: '1.5rem' }}>{count}</span>
+      <span style={{ color: 'black', fontSize: '1.5rem' }}>{cantidad}</span>
       <button className="btn btn-success" onClick={sumar}>+</button>
     </div>
     <div style={{ marginTop: '10px' }}>
