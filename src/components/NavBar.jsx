@@ -47,8 +47,10 @@ function NavBar() {
 </ul>
 
 
+    <NavLink to='/cart' style={{ textDecoration: 'none' }}>
+        <CartWidget/>
+    </NavLink>
     
-      <CartWidget/>
     </nav>
   );
 }

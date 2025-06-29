@@ -10,6 +10,7 @@ import ItemDetailContainer from './components/ItemDetailContainer';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import Error from './components/Error';
 import {CartProvider} from './context/CartContext';
+import Cart from './components/Cart';
 function App() {
   return (
     <BrowserRouter>
@@ -21,16 +22,17 @@ function App() {
         <Route path='/category/:categoryId' element={<ItemListContainer greeting="Estas en la categoría:" />} />
     <Route path='/ofertas' element={<ItemListContainer greeting="¡Ofertas destacadas!" />} />
       <Route path='/item/:itemId' element={<ItemDetailContainer /* greeting="¡Top ventas!" */ />} /> 
+      <Route path='/cart' element={<Cart/>} />
         <Route path='*' element={<Error/>} />
 
 
         {/* <Route path="/categoria/:categoriaId" element={<ItemListContainer greeting="Productos por categoría" />} /> */}
 
       </Routes>
-  
-  
+
     </CartProvider>
     </BrowserRouter>
+  
   )
 }
 function MainLayout() {

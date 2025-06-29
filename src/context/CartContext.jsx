@@ -60,13 +60,35 @@ export const CartProvider= ({children}) => {
     return cart.some((prod) => prod.id === id);//some es un método de array que devuelve true si al menos un elemento del array cumple la condición, en este caso si el id del producto es igual al id del producto que se está buscando
     //isInCart es una función que verifica si un producto está en el carrito, y la vamos a usar en addItem para evitar que se agregue un producto que ya está en el carrito, y en vez de duplicarse, se suma al que ya existe con esa id
   }
+
+//cantidad de items en carrito que usamos en CartWidget
+  const cartQuantity = () => {
+    return cart.reduce((acc, prod) => acc += prod.quantity, 0);
+    //reduce es un método de array que reduce el array a un solo valor, en este caso la cantidad de productos en el carrito
+    //acc es el acumulador que va sumando las cantidades de cada producto
+    //prod es cada producto del carrito
+    //prod.quantity es la cantidad de cada producto
+  }
+
+  //total del carrito
+  const cartTotal = () => {
+return cart.reduce((acc, prod) => acc += (prod.quantity * prod.price),0);
+  }
+
+  //total con impuestos
+
+  const totalConImpuestosNacionales = () => {
+    return cart.reduce((acc, prod) => acc += (prod.quantity * prod.price),5);
+
+  }
+
   /* S
   const deleteItem = (id) => {
     // implementa a funcionalidade para apagar um produto do carrinho
   }; */
 
   return (
-    <CartContext.Provider value={{cart, addItem, clear, removeItem /* setCart */}}>
+    <CartContext.Provider value={{cart, addItem, clear, removeItem, cartQuantity /* setCart */}}>
       {/* Proveedor del contexto que envuelve a los hijos */}
       {children}
       
