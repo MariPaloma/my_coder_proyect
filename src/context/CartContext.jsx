@@ -88,7 +88,7 @@ return cart.reduce((acc, prod) => acc += (prod.quantity * prod.price),0);
   }; */
 
   return (
-    <CartContext.Provider value={{cart, addItem, clear, removeItem, cartQuantity /* setCart */}}>
+    <CartContext.Provider value={{cart, addItem, clear, removeItem, cartQuantity, cartTotal, totalConImpuestosNacionales /* setCart */}}>
       {/* Proveedor del contexto que envuelve a los hijos */}
       {children}
       
