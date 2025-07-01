@@ -29,6 +29,28 @@ category:"libreria",
 price:2950,
 stock:10,
 img:"https://img.joomcdn.net/e5812ad7f96b1db501476d1074d8b5582f8f97b3_original.jpeg"
+},
+{id:'05',
+name:"Taza personalizada",
+category:"más-vendidos",
+price:8500,
+stock:10,
+img:"https://hilocreations.es/wp-content/uploads/2023/02/img_3008_jpg-scaled.jpg"
+},
+{id:'06',
+name:"post it gatitos",
+category:"más-vendidos",
+price:6500,
+stock:10,
+img:"https://img.joomcdn.net/e5812ad7f96b1db501476d1074d8b5582f8f97b3_original.jpeg"
+}
+,
+{id:'07',
+name:"stickers personalizados",
+category:"ofertas",
+price:5000,
+stock:5,
+img:"https://http2.mlstatic.com/D_NQ_NP_765044-MLA82461534455_022025-O.webp"
 }
 ]
 

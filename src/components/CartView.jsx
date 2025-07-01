@@ -14,8 +14,15 @@ const CartView=()  => {
           {
           cart.map((compra) => (
 
-            <div key={compra.id} style={{width:'100%',display: 'flex', justifyContent: 'center', alignItems: 'center', padding:'2rem'}}>
-              <h3>{compra.title}</h3>   
+            <div key={compra.id} style={{display: 'flex', justifyContent: 'space-between', alignItems: 'center', padding:'2rem'}}>
+              <img src={compra.img} alt={compra.name} style={{width: '5rem'}}/> 
+              <span>{compra.name}</span> 
+              <span>${compra.price}</span>
+              <span>{compra.quantity}</span>
+              {/* //mostrar el precio total de cada producto */}
+              <span>precio total:${compra.price * compra.quantity},00</span>
+              <button className="btn btn-danger" onClick={()=> removeItem(compra.id)}>🗑</button>
+           
                  </div>  
           ))
 
@@ -26,12 +33,12 @@ const CartView=()  => {
           </div>
 {/* mostrar el total a pagar y la opción de borrar todo el carrito y terminar la compra */}
 
-<span> Total sin impuestos: $ {cartTotal()},00 </span>
-<span>Total con impuestos nacionales: $ {totalConImpuestosNacionales()},00</span>
+<span style={{display: 'flex', justifyContent: 'space-between', alignItems: 'center', padding:'2rem'}}ñ> Total a pagar: $ {cartTotal()},00 </span>
+{/* <span>Total con impuestos nacionales: $ {totalConImpuestosNacionales()},00</span> */}
 
 
- <div style={{display: 'flex', justifyContent: 'center', alignItems: 'center', padding:'2rem'}}> {/*//div de cierre del carrito */}
-<button className='btn btn-danger'>Borrar</button>
+ <div style={{display: 'flex', justifyContent: 'space-between', alignItems: 'center', padding:'2rem'}}> {/*//div de cierre del carrito */}
+<button className='btn btn-danger' onClick={clear}>Borrar</button>
 <button className='btn btn-dark'>Terminar compra</button>
    </div>
 

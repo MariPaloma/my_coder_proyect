@@ -41,8 +41,8 @@ function NavBar() {
     <li><NavLink to="/category/más-vendidos">+ Vendidos✨</NavLink></li>
   <li><NavLink to="/category/libreria">Librería</NavLink></li>
   <li><NavLink to="/category/bazar">Bazar</NavLink></li>
-  <li><NavLink to="/category/ofertas">Ofertas</NavLink></li>
-    <li><NavLink to="/category/productos">Ver Todo</NavLink></li>
+  <li><NavLink to="category/ofertas">Ofertas</NavLink></li>
+    <li><NavLink to="/">Ver Todo</NavLink></li>
 
 </ul>
 
