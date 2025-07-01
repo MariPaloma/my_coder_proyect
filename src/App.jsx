@@ -20,7 +20,7 @@ function App() {
   <Routes>
         <Route path='/' element={<MainLayout greeting="Bienvenidos a mi app" />} />
         <Route path='/category/:categoryId' element={<ItemListContainer greeting="Estas en la categoría:" />} />
-        <Route path='/item/:itemId' element={<ItemDetailContainer /* greeting="¡Top ventas!" */ />} /> 
+        <Route path='/item/:itemId' element={<ItemDetailContainer greeting="¡Top ventas!" />} /> 
       <Route path='/cart' element={<Cart/>} />
         <Route path='*' element={<Error/>} />
 
